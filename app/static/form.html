@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Change My Mind</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    div {
+      font-family: "Comic Sans MS", cursive, sans-serif
+    }
+    input {
+      font-family: "Comic Sans MS", cursive, sans-serif
+    }
+    </style>
+  </head>
+  <body>
+  <!-- nterest Form -->
+    <form method="post" name="InterestForm" action="chatbox.html">
+      <div class="form-group pb-1">
+        <select required class="form-control" id="interest">
+          <option selected hidden value="">Interest*</option>
+          <option value="Best Professor">Who is the best CS Professor at Pitt?</option>
+          <option value="Worst Professor">Who is the worst CS Professor at Pitt?</option>
+          <option value="Vaccination">Vaccination</option>
+          <option value="Gun">Gun Control</option>
+          <option value="Abortion">Abortion</option>
+          <option value="Immigration">Immigration</option>
+          <option value="PvsW">Pancakes vs Waffles</option>
+          <option value="DvsC">Dogs vs Cats</option>
+          <option value="FvsFS">French Toast vs French Toast Sticks</option>
+          <option value="Break?">Were Ross and Rachel on a Break?</option>
+          <option value="Grades">Grade Deflation</option>
+          <option value="Sport?">Is Band a Sport?</option>
+          <option value="Eat?">If you were starving, would you eat the charcaters from Veggie Tales?</option>
+          <option value="Drones?">Should the Military use Drone Warfare?</option>
+          <option value="Drones Spy?">Are drones spying on us</option>
+          <option value="Best Apocalypse">What is the best way to end the world?</option>
+        </select>
+      </div>
+      <div class="form-group pb-1">
+        <select required class="form-control" id="level">
+          <option selected hidden value="">How intense do you want this debate to be?*</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group pb-1">
+        <input required type="text" class="form-control" id="position" placeholder="Position*">
+      </div>
+      <div class="form-group pb-1">
+        <input required type="text" class="form-control" id="opening" placeholder="Opening Argument*">
+      </div>
+      <input type="submit" value="Battle to the Death!">
+    </form>
+  </body>
+</html>
