@@ -1,0 +1,39 @@
+#container{
+	position:relative;
+	margin:auto;
+	width:400px;
+	height:500px;
+	
+	box-sizing: border-box;         
+	border: 2px solid #80ff80;
+	background-color: #e6ffcc;
+}
+
+#conv{
+	margin:auto;
+	width:350px;
+	height:300px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	box-sizing: border-box;         
+	background-color: #e6ffcc;
+	font-family: Helvetica, sans-serif;
+	font-size: 11pt;
+	line-height: 1.5;
+}
+
+#text-input{
+	margin:auto;
+	width: 90%;
+	position: absolute;
+	left: 15px;
+	bottom: 35px;
+}
+
+#send-btn{
+	margin:auto;
+	position: absolute;
+	right: 2px;
+	bottom: 5px;
+}
