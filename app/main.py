@@ -1,12 +1,11 @@
-from flask import Flask
-from flask import Response
+from flask import Flask, redirect
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def root():
-    return Response('This is NOT HTML.', mimetype='text/plain')
+    return redirect("/static/ChangeMyMind.html", code=302)
 
 
 if __name__ == '__main__':
