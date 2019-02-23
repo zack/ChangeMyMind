@@ -2,79 +2,125 @@
 <html lang="en">
   <head>
     <title>Change My Mind</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    div {
-      font-family: "Comic Sans MS", cursive, sans-serif
-    }
-    h1 {
-      font-family: "Comic Sans MS", cursive, sans-serif
-    }
-    .intensity {
-      border: 10px solid transparent;
-      margin-bottom: 25px;
-      width: 60%;
-      height: 60%;
-    }
-    .button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      font-family: "Comic Sans MS", cursive, sans-serif
-    }
+		div {
+		  font-family: "Comic Sans MS", cursive, sans-serif
+		  text-align: center;
+		}
+		.quarter-page {
+			width: 25%;
+			float: left;
+		}
+		h1 {
+		  font-family: "Comic Sans MS", cursive, sans-serif
+		}
+		.intensity {
+		  border: 10px solid transparent;
+		  margin-bottom: 25px;
+		  width: 60%;
+		  height: 60%;
+		}
+		.button {
+		  background-color: #4CAF50;
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  font-family: "Comic Sans MS", cursive, sans-serif
+		}
+		ul {
+		  list-style-type: none;
+		  position: fixed;
+		  top: 0;
+		  width: 100%;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333333;
+		}
+
+		li {
+		  float: left;
+		  border-right: 1px solid #BBBBBB;
+		}
+		
+		li:last-child {
+		  float: right;
+		  border-right: none;
+		}
+		
+		li a {
+		  display: block;
+		  color: #00FF00;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-family: "Comic Sans MS", cursive, sans-serif;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+		.wrapper {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
     </style>
   </head>
   <body>
+	<ul>
+	  <li><a href="ChangeMyMind.html">Home</a></li>
+	  <li><a href="form.html">Debate!</a></li>
+	</ul>
+	<!-- Header -->
+	<h1><br/></h1>
     <h1 align="center">Are you ready for a debate!</h1>
-    
-    
-    
-    
     <!-- Change My Mind Buttons -->
     <div class="row">
       <!-- Button 1 -->
-      <div class="col-sm-3">
-        <img src="changemymind.jpg" alt="Please Don't Fail Us" width="300" height="300">
-        <p align="center"><strong>Eh, I guess so...</strong></p>
-        <a href="form.html">
-          <button type="button">Eh, I guess so...</button>
-        </a>
+      <div class="quarter-page">
+        <p align="center">
+			<img align="center" src="changemymind.jpg" alt="Please Don't Fail Us" width="300" height="300">
+			<a href="form.html">
+			  <button class="wrapper">Eh, I guess so...</button>
+			</a>
+		</p>
       </div>
       
       <!-- Button 2 -->
-      <div class="col-sm-3">
-      <img src="meme.jpg" alt="Please Don't Fail Us" width="300" height="300">
-        <p align="center"><strong>Sure.</strong></p>
-        <a href="form.html">
-          <button type="button">Sure.</button>
-        </a>
+      <div class="quarter-page">
+        <p align="center">
+			<img src="meme.jpg" alt="Please Don't Fail Us" width="300" height="300">
+			<a href="form.html">
+			  <button class="wrapper">Sure.</button>
+			</a>
+		</p>
       </div>
       
       <!-- Button 3 -->
-      <div class="col-sm-3">
-      <img src="meme1.jpg" alt="Please Don't Fail Us" width="300" height="300">
-        <p align="center"><strong>You best believe it!</strong></p>
-        <a href="form.html">
-          <button type="button">You best believe it!</button>
-        </a>
+      <div class="quarter-page">
+        <p align="center">
+			<img align="center" src="meme1.jpg" alt="Please Don't Fail Us" width="300" height="300">
+			<a href="form.html">
+			  <button class="wrapper">You best believe it!</button>
+			</a>
+		</p>
       </div>
       
       <!-- Button 4 -->
-      <div class ="col-sm-3">
-      <img src="Untitled.jpg" alt="Please Don't Fail Us" width="300" height="300">
-        <p align="center"><strong>TrUcK yEaH mOtHeRtRuCkEr!!!!!</strong>
-        <a href="#form.html">
-          <button type="button">TrUcK yEaH mOtHeRtRuCkEr!!!!!</button>
-        </a>
+      <div class ="quarter-page">
+        <p align="center">
+			<img align="center" src="Untitled.jpg" alt="Please Don't Fail Us" width="300" height="300">
+			<a href="form.html">
+			  <button class="wrapper">TrUcK yEaH mOtHeRtRuCkEr!!!!!</button>
+			</a>
+		</p>
       </div>
     </div>
   </body>
