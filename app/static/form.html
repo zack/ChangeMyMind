@@ -2,22 +2,61 @@
 <html lang="en">
   <head>
     <title>Change My Mind</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
     div {
       font-family: "Comic Sans MS", cursive, sans-serif
     }
     input {
       font-family: "Comic Sans MS", cursive, sans-serif
-    }
+	}
+	
+	ul {
+	  list-style-type: none;
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333333;
+	}
+
+	li {
+	  float: left;
+	  border-right: 1px solid #BBBBBB;
+	}
+	
+	li:last-child {
+	  float: right;
+	  border-right: none;
+	}
+	
+	li a {
+	  display: block;
+	  color: #00FF00;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-family: "Comic Sans MS", cursive, sans-serif;
+	}
+
+	li a:hover {
+	  background-color: #111;
+	}
     </style>
   </head>
   <body>
-  <!-- nterest Form -->
+	<ul>
+	  <li><a href="ChangeMyMind.html">Home</a></li>
+	  <li><a href="form.html">Debate!</a></li>
+	</ul>
+	<h1><br/></h1>
+  <!-- Interest Form -->
     <form method="post" name="InterestForm" action="chatbox.html">
       <div class="form-group pb-1">
         <select required class="form-control" id="interest">
