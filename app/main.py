@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def root():
-    return redirect("ChangeMyMind.html")
+    return redirect("/static/ChangeMyMind.html", code=302)
 
 
 if __name__ == '__main__':
