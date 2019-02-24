@@ -12,24 +12,38 @@ window.onload=function(){
 	});
 }
 
-function Send_Btn(top) {
-	var bubble = document.createElement("div");
-	bubble.innerHTML = "Me: " + document.getElementById("text-input").value;
-	bubble.style.width = "100px";
-	bubble.style.height = "10px";
-	bubble.style.borderRadius = "10px";
-	bubble.style.padding = "10px"; 
-	bubble.style.position = "absolute";
-	top += 30;
-	top = top + 30;
-	alert(top);
-	bubble.style.top = top.toString(); 
-	bubble.style.right = "5px";
-	bubble.style.background = "#6666ff";
-	bubble.style.color = "white";
+function Send_Btn() {
+	if(document.getElementById("text-input").value.trim().length > 0) {
+		var name = document.createElement("div");
+		var bubble = document.createElement("div");
+		var conv = document.getElementById("conv");
+		
+		name.innerHTML = "ilovewaffles23";
+		name.style.textAlign = "right";
+		name.style.marginTop = "1px";
+		name.style.color = "grey";
+		name.style.fontSize = "10";
+		
+		bubble.innerHTML = document.getElementById("text-input").value;
+		bubble.style.width = "auto";
+		bubble.style.height = "auto";
+		bubble.style.display = "table";
+		bubble.style.wordBreak = "break-all";
+		bubble.style.wordWrap = "normal";
+		bubble.style.borderRadius = "10px";
+		bubble.style.padding = "7px"; 
+		bubble.style.marginLeft = "auto";
+		bubble.style.marginRight = "0px"; 
+		bubble.style.marginTop = "1px";
+		bubble.style.maxWidth = "40%";
+		bubble.style.background = "#6666ff";
+		bubble.style.color = "white";
 
-	document.getElementById("conv").appendChild(bubble);
-	//document.getElementById("conv").innerHTML+="Me: " + document.getElementById("text-input").value + "<br>";
-	document.getElementById("text-input").value = "";
+		conv.append(name);
+		conv.appendChild(bubble);
+		conv.scrollTop = conv.scrollHeight;
+		
+		document.getElementById("text-input").value = "";
+	}
 }
 

@@ -2,8 +2,7 @@
 	position:relative;
 	margin:auto;
 	width:400px;
-	height:500px;
-	
+	height:450px;
 	box-sizing: border-box;         
 	border: 2px solid #80ff80;
 	background-color: #e6ffcc;
@@ -18,6 +17,7 @@
 	left: 15px;
 	box-sizing: border-box;         
 	background-color: #e6ffcc;
+	overflow-y: auto;
 	font-family: Helvetica, sans-serif;
 	font-size: 11pt;
 	line-height: 1.5;
