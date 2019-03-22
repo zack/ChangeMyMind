@@ -56,25 +56,24 @@
 	<h1><br/></h1>
   <!-- Interest Form -->
     <form method="get" name="InterestForm" action="chatbox.html">
-      <div class="form-group pb-1">
+      <div>
         <select required class="form-control" id="interest">
           <option selected hidden value="">Interest*</option>
-          <option value="Eat?">If you were starving, would you eat the characters from Veggie Tales?</option>
-          <option value="Best Professor">Who is the best CS Professor at Pitt?</option>
-          <option value="Worst Professor">Who is the worst CS Professor at Pitt?</option>
-          <option value="PvsW">Pancakes vs Waffles</option>
-          <option value="DvsC">Dogs vs Cats</option>
-          <option value="FvsFS">French Toast vs French Toast Sticks</option>
-          <option value="Break?">Were Ross and Rachel on a Break?</option>
-          <option value="Grades">Grade Deflation</option>
-          <option value="Sport?">Is Band a Sport?</option>
-          
-          <option value="Drones?">Should the Military use Drone Warfare?</option>
-          <option value="Drones Spy?">Are drones spying on us</option>
-          <option value="Best Apocalypse">What is the best way to end the world?</option>
+          <option value="Best Professor">Is Timothy James the best professor at Pitt?</option>
+          <option value="Worst Professor">Is Timothy James the worst professor at Pitt?</option>
+          <option value="PvsW">Are pancakes better than waffles?</option>
+          <option value="DvsC">Are dogs better than cats?</option>
+          <option value="FvsFS">Is french toast better than french toast sticks?</option>
+          <option value="Break?">Were Ross and Rachel on a break?</option>
+          <option value="Grades">Is grade deflation an acceptable practice?</option>
+          <option value="Sport?">Is marching band a sport?</option>
+          <option value="Eat?">If you were starving, would you eat the charcaters from Veggie Tales?</option>
+          <option value="Drones?">Should the military use drone warfare?</option>
+          <option value="Drones Spy?">Are drones spying on us right now?</option>
+          <option value="Best Apocalypse">Would a zombie apocalypse actually be kind of a good time?</option>
         </select>
       </div>
-      <div class="form-group pb-1">
+      <div>
         <select required class="form-control" id="level">
           <option selected hidden value="">How intense do you want this debate to be?*</option>
           <option value="1">1</option>
@@ -84,16 +83,14 @@
           <option value="5">5</option>
         </select>
       </div>
-      <div class="form-group pb-1">
-        <input required type="text" class="form-control" id="position" placeholder="Position*">
+      <div>
+        <select required class="form-control" id="position">
+          <option selected hidden value="">Position*</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
       </div>
-      <div class="form-group pb-1">
-        <input required type="text" class="form-control" id="opening" placeholder="Opening Argument*">
-      </div>
-      <!--<input type="submit" value="Battle to the Death!">-->
-      <a href="chatbox.html">
-		<button class="wrapper">Battle to the Death!</button>
-      </a>
+      <input type="submit" value="Battle to the Death!">
     </form>
   </body>
 </html>

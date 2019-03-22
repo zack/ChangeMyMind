@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="google-signin-scope" content="profile email">
+		<meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<style>
 		ul {
 			list-style-type: none;
@@ -41,6 +44,23 @@
 		<ul>
 			<li><a href="ChangeMyMind.html">Home</a></li>
 			<li><a href="form.html">Debate!</a></li>
+			<li><div class="g-signin2" data-onsuccess="onSignedIn"></div><a href="#" onclick="signOut();" id="signout">Sign Out</a></li>
 		</ul>
+		<script>
+			function onSignIn(){
+			  var profile = googleUser.getBasicProfile();
+			  document.getElementById('profileinfo').innerHTML = profile.getName() + "<br>"
+			}
+			function signOut() {
+			  var auth2 = gapi.auth2.getAuthInstance();
+			  auth2.signOut();
+			}
+			function onSignedIn(googleUser) {
+			  const signoutElement = document.getElementById('signout');
+			  signoutElement.innerHTML =
+				  'Sign out ' + googleUser.getBasicProfile().getEmail();
+			}
+	  </script>
+	  <script src="https://apis.google.com/js/platform.js" async defer></script>
 	</body>
 </html>
