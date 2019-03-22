@@ -2,7 +2,8 @@
     <head>
 		<meta charset="utf-8">
         <link rel="stylesheet" href="chat-style.css">
-		<script src="chat.js"></script>
+		<script src="/static/chat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
 		<style>
 			ul {
 			  list-style-type: none;
@@ -19,12 +20,12 @@
 			  float: left;
 			  border-right: 1px solid #BBBBBB;
 			}
-			
+
 			li:last-child {
 			  float: right;
 			  border-right: none;
 			}
-			
+
 			li a {
 			  display: block;
 			  color: #00FF00;
@@ -37,7 +38,7 @@
 			li a:hover {
 				background-color: #111;
 			}
-      
+
       button {
         font-family: "Comic Sans MS", cursive, sans-serif;
       }
@@ -57,5 +58,6 @@
 		<div id="conv">
 		</div>
 	</div>
+
   </body>
 </html>
