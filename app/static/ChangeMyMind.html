@@ -3,75 +3,15 @@
   <head>
     <title>Change My Mind</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="chat-style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-signin-scope" content="profile email">
 	<meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
-    <style>
-		div {
-		  font-family: "Comic Sans MS", cursive, sans-serif
-		  text-align: center;
-		}
-		.quarter-page {
-			width: 25%;
-			float: left;
-		}
-		h1 {
-		  font-family: "Comic Sans MS", cursive, sans-serif
-		}
-		.intensity {
-		  border: 10px solid transparent;
-		  margin-bottom: 25px;
-		  width: 60%;
-		  height: 60%;
-		}
-		button{
-		  font-family: "Comic Sans MS", cursive, sans-serif
-		}
-		ul {
-		  list-style-type: none;
-		  position: fixed;
-		  top: 0;
-		  width: 100%;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333333;
-		}
-
-		li {
-		  float: left;
-		  border-right: 1px solid #BBBBBB;
-		}
-		
-		li:last-child {
-		  float: right;
-		  border-right: none;
-		}
-		
-		li a {
-		  display: block;
-		  color: #00FF00;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		  font-family: "Comic Sans MS", cursive, sans-serif;
-		}
-
-		li a:hover {
-			background-color: #111;
-		}
-		.wrapper {
-		  display: flex;
-		  align-items: center;
-		  justify-content: center;
-		}
-    </style>
   </head>
   <body>
 	<ul>
 		<li><a href="ChangeMyMind.html">Home</a></li>
-		<li><a href="form.html">Debate!</a></li>
 		<li><div class="g-signin2" data-onsuccess="onSignedIn"></div></li>
 	</ul>
 	<script>
@@ -96,41 +36,41 @@
     <!-- Change My Mind Buttons -->
     <div class="row">
       <!-- Button 1 -->
-      <div class="quarter-page">
+      <div id="quarter-page">
         <p align="center">
 			<img align="center" src="changemymind.jpg" alt="Please Don't Fail Us" width="300" height="300">
 			<a href="form.html">
-			  <button class="wrapper">Eh, I guess so...</button>
+			  <button id="wrapper">Eh, I guess so...</button>
 			</a>
 		</p>
       </div>
       
       <!-- Button 2 -->
-      <div class="quarter-page">
+      <div id="quarter-page">
         <p align="center">
 			<img src="meme.jpg" alt="Please Don't Fail Us" width="300" height="300">
 			<a href="form.html">
-			  <button class="wrapper">Sure.</button>
+			  <button id="wrapper">Sure.</button>
 			</a>
 		</p>
       </div>
       
       <!-- Button 3 -->
-      <div class="quarter-page">
+      <div id="quarter-page">
         <p align="center">
 			<img align="center" src="meme1.jpg" alt="Please Don't Fail Us" width="300" height="300">
 			<a href="form.html">
-			  <button class="wrapper">You best believe it!</button>
+			  <button id="wrapper">You best believe it!</button>
 			</a>
 		</p>
       </div>
       
       <!-- Button 4 -->
-      <div class ="quarter-page">
+      <div id="quarter-page">
         <p align="center">
 			<img align="center" src="Untitled.jpg" alt="Please Don't Fail Us" width="300" height="300">
 			<a href="form.html">
-			  <button class="wrapper">TrUcK yEaH mOtHeRtRuCkEr!!!!!</button>
+			  <button id="wrapper">TrUcK yEaH mOtHeRtRuCkEr!!!!!</button>
 			</a>
 		</p>
       </div>
