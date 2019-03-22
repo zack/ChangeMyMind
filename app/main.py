@@ -6,6 +6,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
 socketio = SocketIO(app)
 
+
 @app.route('/')
 def root():
     return redirect("static/ChangeMyMind.html", code=302)

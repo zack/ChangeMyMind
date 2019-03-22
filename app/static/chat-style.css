@@ -37,3 +37,65 @@
 	right: 2px;
 	bottom: 5px;
 }
+
+div {
+	font-family: "Comic Sans MS", cursive, sans-serif
+	text-align: center;
+}
+
+input {
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+#quarter-page {
+	width: 25%;
+	float: left;
+}
+
+h1 {
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+button{
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+ul {
+	list-style-type: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+}
+
+li {
+	float: left;
+	border-right: 1px solid #BBBBBB;
+}
+
+li:last-child {
+	float: right;
+	border-right: none;
+}
+
+li a {
+	display: block;
+	color: #00FF00;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+li a:hover {
+	background-color: #111;
+}
+
+#wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
