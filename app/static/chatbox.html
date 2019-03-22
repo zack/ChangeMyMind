@@ -1,53 +1,34 @@
 <html>
     <head>
 		<meta charset="utf-8">
-        <link rel="stylesheet" href="chat-style.css">
+        <link rel="stylesheet" type="text/css" href="chat-style.css">
 		<script src="chat.js"></script>
-		<style>
-			ul {
-			  list-style-type: none;
-			  position: fixed;
-			  top: 0;
-			  width: 100%;
-			  margin: 0;
-			  padding: 0;
-			  overflow: hidden;
-			  background-color: #333333;
-			}
-
-			li {
-			  float: left;
-			  border-right: 1px solid #BBBBBB;
-			}
-			
-			li:last-child {
-			  float: right;
-			  border-right: none;
-			}
-			
-			li a {
-			  display: block;
-			  color: #00FF00;
-			  text-align: center;
-			  padding: 14px 16px;
-			  text-decoration: none;
-			  font-family: "Comic Sans MS", cursive, sans-serif;
-			}
-
-			li a:hover {
-				background-color: #111;
-			}
-      
-      button {
-        font-family: "Comic Sans MS", cursive, sans-serif;
-      }
-		</style>
+		<meta name="google-signin-scope" content="profile email">
+		<meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
     </head>
   <body>
 	<ul>
-	  <li><a href="ChangeMyMind.html">Home</a></li>
-	  <li><a href="form.html">Debate!</a></li>
+		<li><a href="ChangeMyMind.html">Home</a></li>
+		<li><a href="#" onclick="signOut();" id="signout">Sign Out</a></li>
+		<li><div class="g-signin2" data-onsuccess="onSignedIn"></div></li>
 	</ul>
+	<script>
+		function onSignIn(){
+		  var profile = googleUser.getBasicProfile();
+		  document.getElementById('profileinfo').innerHTML = profile.getName() + "<br>"
+		}
+		function signOut() {
+		  var auth2 = gapi.auth2.getAuthInstance();
+		  auth2.signOut();
+		}
+		function onSignedIn(googleUser) {
+		  const signoutElement = document.getElementById('signout');
+		  signoutElement.innerHTML =
+			  'Sign out ' + googleUser.getBasicProfile().getEmail();
+		}
+	</script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<h1><br/></h1>
 	<div id="container">
 		<textarea id="text-input" rows="3" cols="50" autofocus="autofocus">
