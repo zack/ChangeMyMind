@@ -4,6 +4,9 @@
     <title>Change My Mind</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
     <style>
     div {
       font-family: "Comic Sans MS", cursive, sans-serif
@@ -12,7 +15,6 @@
 	input {
       font-family: "Comic Sans MS", cursive, sans-serif
 	}
-	
 	ul {
 	  list-style-type: none;
 	  position: fixed;
@@ -50,9 +52,26 @@
   </head>
   <body>
 	<ul>
-	  <li><a href="ChangeMyMind.html">Home</a></li>
-	  <li><a href="form.html">Debate!</a></li>
+		<li><a href="ChangeMyMind.html">Home</a></li>
+		<li><a href="form.html">Debate!</a></li>
+		<li><div class="g-signin2" data-onsuccess="onSignedIn"></div></li>
 	</ul>
+	<script>
+		function onSignIn(){
+		  var profile = googleUser.getBasicProfile();
+		  document.getElementById('profileinfo').innerHTML = profile.getName() + "<br>"
+		}
+		function signOut() {
+		  var auth2 = gapi.auth2.getAuthInstance();
+		  auth2.signOut();
+		}
+		function onSignedIn(googleUser) {
+		  const signoutElement = document.getElementById('signout');
+		  signoutElement.innerHTML =
+			  'Sign out ' + googleUser.getBasicProfile().getEmail();
+		}
+	</script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<h1><br/></h1>
   <!-- Interest Form -->
     <form method="get" name="InterestForm" action="chatbox.html">
