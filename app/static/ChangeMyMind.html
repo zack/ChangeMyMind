@@ -23,6 +23,9 @@
 		function signOut() {
 		  var auth2 = gapi.auth2.getAuthInstance();
 		  auth2.signOut();
+      const signoutElement = document.getElementById('signout');
+		  signoutElement.innerHTML =
+			  'Sign out'
 		}
 		function onSignedIn(googleUser) {
 		  const signoutElement = document.getElementById('signout');
