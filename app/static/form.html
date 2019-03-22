@@ -55,7 +55,7 @@
 	</ul>
 	<h1><br/></h1>
   <!-- Interest Form -->
-    <form method="post" name="InterestForm" action="chatbox.html">
+    <form method="get" name="InterestForm" action="chatbox.html">
       <div class="form-group pb-1">
         <select required class="form-control" id="interest">
           <option selected hidden value="">Interest*</option>
@@ -89,7 +89,10 @@
       <div class="form-group pb-1">
         <input required type="text" class="form-control" id="opening" placeholder="Opening Argument*">
       </div>
-      <input type="submit" value="Battle to the Death!">
+      <!--<input type="submit" value="Battle to the Death!">-->
+      <a href="chatbox.html">
+		<button class="wrapper">Battle to the Death!</button>
+      </a>
     </form>
   </body>
 </html>
