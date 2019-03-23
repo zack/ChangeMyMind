@@ -20,6 +20,9 @@
 		}
 		function signOut() {
 		  var auth2 = gapi.auth2.getAuthInstance();
+          const signoutElement = document.getElementById('signout');
+		  signoutElement.innerHTML =
+			  'Sign out'
 		  auth2.signOut();
 		}
 		function onSignedIn(googleUser) {
