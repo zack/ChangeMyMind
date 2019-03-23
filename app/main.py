@@ -3,12 +3,10 @@ from flask_socketio import SocketIO
 
 
 app = Flask(__name__)
-<<<<<<< HEAD
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-=======
 app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
 socketio = SocketIO(app)
->>>>>>> 200669fcadfe56883699c3ad6a385242dba95d04
+
 
 
 @app.route('/')
