@@ -1,11 +1,48 @@
 <html>
     <head>
 		<meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="chat-style.css">
-		<script src="chat.js"></script>
-		<meta name="google-signin-scope" content="profile email">
-		<meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
+        <link rel="stylesheet" href="chat-style.css">
+		<script src="/static/chat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+		<style>
+			ul {
+			  list-style-type: none;
+			  position: fixed;
+			  top: 0;
+			  width: 100%;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: #333333;
+			}
+
+			li {
+			  float: left;
+			  border-right: 1px solid #BBBBBB;
+			}
+
+			li:last-child {
+			  float: right;
+			  border-right: none;
+			}
+
+			li a {
+			  display: block;
+			  color: #00FF00;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			  font-family: "Comic Sans MS", cursive, sans-serif;
+			}
+
+			li a:hover {
+				background-color: #111;
+			}
+
+      button {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+		</style>
     </head>
   <body>
 	<ul>
@@ -41,5 +78,6 @@
 		<div id="conv">
 		</div>
 	</div>
+
   </body>
 </html>
