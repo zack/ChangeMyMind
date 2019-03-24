@@ -5,7 +5,7 @@ window.onload=function(){
 		document.getElementById("send-btn").onclick = function fun(e) {
 				e.preventDefault()
 		window.socket.emit( 'my event', {
-				user_name : 'username',
+				user_name : socket.id,
 				message : document.getElementById("text-input").value
 			} )
 		}
@@ -31,7 +31,7 @@ window.onload=function(){
 				var conv = document.getElementById("conv");
 
 				name.innerHTML = msg.user_name;
-				name.style.textAlign = "right";
+				name.style.textAlign = "left";
 				name.style.marginTop = "1px";
 				name.style.color = "grey";
 				name.style.fontSize = "10";
@@ -44,10 +44,10 @@ window.onload=function(){
 				bubble.style.wordWrap = "normal";
 				bubble.style.borderRadius = "10px";
 				bubble.style.padding = "7px";
-				bubble.style.marginLeft = "auto";
-				bubble.style.marginRight = "0px";
+				bubble.style.marginLeft = "5px";
+				//bubble.style.marginRight = "0px";
 				bubble.style.marginTop = "1px";
-				bubble.style.maxWidth = "40%";
+				bubble.style.maxWidth = "90%";
 				bubble.style.background = "#6666ff";
 				bubble.style.color = "white";
 
