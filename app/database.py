@@ -3,12 +3,11 @@ from google.cloud import datastore
 def get_client():
     return datastore.Client()
 
-def put_debate(user_a, user_b, transcript):
+def put_debate(id, user, transcript):
     ds = get_client()
-    task_key = ds.key("debate") # key will be generated automatically
+    task_key = ds.key("debate", id) # unique ID for this entity
     task = datastore.Entity(key=task_key)
-    task["user_a"] = user_a
-    task["user_b"] = user_b
+    task["user"] = user
     task["transcript"] = transcript
     ds.put(task)
     return task
