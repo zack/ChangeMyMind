@@ -14,7 +14,7 @@ def put_debate(id, user, transcript):
 
 def get_debates():
     ds = get_client()
-    return ds.query(kind="debate").fetch()
+    return str(list(ds.query(kind="debate").fetch()))
 
 
 #print([result for result in ds.query(kind="Example").fetch()])
