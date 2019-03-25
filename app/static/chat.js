@@ -1,6 +1,6 @@
 window.onload=function(){
-	window.socket = io.connect(null, {port: 5000, rememberTransport: false});
-	//Temporary unique debate ID
+	window.socket = io.connect('http://localhost:8080');
+    //Temporary unique debate ID
     window.debate_id = 1
     socket.on( 'connect', function() {
 		document.getElementById("send-btn").onclick = function fun(e) {
