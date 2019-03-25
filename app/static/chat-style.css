@@ -39,12 +39,12 @@
 }
 
 div {
-	font-family: "Comic Sans MS", cursive, sans-serif
+	font-family: Serif, cursive, sans-serif
 	text-align: center;
 }
 
 input {
-	font-family: "Comic Sans MS", cursive, sans-serif
+	font-family: Serif, cursive, sans-serif
 }
 
 #quarter-page {
@@ -53,11 +53,11 @@ input {
 }
 
 h1 {
-	font-family: "Comic Sans MS", cursive, sans-serif
+	font-family: Serif, cursive, sans-serif
 }
 
 button{
-	font-family: "Comic Sans MS", cursive, sans-serif
+	font-family: Serif, cursive, sans-serif
 }
 
 ul {
@@ -87,7 +87,7 @@ li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: "Serif", cursive, sans-serif;
 }
 
 li a:hover {
