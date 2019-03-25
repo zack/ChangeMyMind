@@ -5,8 +5,10 @@ window.onload=function(){
     socket.on( 'connect', function() {
 		document.getElementById("send-btn").onclick = function fun(e) {
 				e.preventDefault()
+                var signout = document.getElementById("signout").textContent.split(" ");
+                var user_name = signout[signout.length-1]
 		window.socket.emit( 'my event', {
-				user_name : socket.id,
+				user_name : user_name,
 				message : document.getElementById("text-input").value
 			} )
 		}
@@ -96,3 +98,4 @@ function dbRetrieve(){
         console.log(data);
     });
 }
+
