@@ -45,6 +45,12 @@ def get_debates():
     ds = get_client()
     return ds.query(kind="debate").fetch()
 
+@app.after_request
+def add_header(resp):
+    resp.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    resp.headers['Pragma'] = 'no-cache'
+    resp.headers['Expires'] = '0'
+    return resp
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
