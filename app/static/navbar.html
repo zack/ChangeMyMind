@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="chat-style.css">
-		<meta name="google-signin-scope" content="profile email">
-		<meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
-	</head>
-	<body>
-		<ul>
+   <nav>
+   <ul>
 			<li><a href="ChangeMyMind.html">Home</a></li>
 			<li><div class="g-signin2" data-onsuccess="onSignedIn"></div><a href="#" onclick="signOut();" id="signout">Sign Out</a></li>
 		</ul>
+    </nav>
 		<script>
 			function onSignIn(){
 			  var profile = googleUser.getBasicProfile();
@@ -26,6 +19,3 @@
 				  'Sign out ' + googleUser.getBasicProfile().getEmail();
 			}
 		</script>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
-	</body>
-</html>

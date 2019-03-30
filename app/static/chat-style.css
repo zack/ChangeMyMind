@@ -17,7 +17,7 @@
 	left: 15px;
 	box-sizing: border-box;         
 	background-color: #7395AE;
-	overflow-y: auto;
+  overflow-y: auto;
 	font-family: Helvetica, sans-serif;
 	font-size: 11pt;
 	line-height: 1.5;
@@ -82,6 +82,14 @@ img {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
+
+div {
+	font-family: Serif, cursive, sans-serif
+	text-align: center;
+}
+
+input {
+	font-family: Serif, cursive, sans-serif
 }
 
 #quarter-page {
@@ -91,6 +99,12 @@ img {
 
 #row{
   float: left;
+h1 {
+	font-family: Serif, cursive, sans-serif
+}
+
+button{
+	font-family: Serif, cursive, sans-serif
 }
 
 ul {
@@ -120,6 +134,7 @@ li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	font-family: "Serif", cursive, sans-serif;
 }
 
 li a:hover {
@@ -152,4 +167,3 @@ body {
   align-items: center;
 	justify-content: center;
 }
-

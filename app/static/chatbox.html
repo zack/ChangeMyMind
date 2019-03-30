@@ -2,8 +2,9 @@
     <head>
 		<meta charset="utf-8">
         <link rel="stylesheet" href="chat-style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="/static/chat.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
     </head>
   <body>
 	<ul>
@@ -18,6 +19,9 @@
 		}
 		function signOut() {
 		  var auth2 = gapi.auth2.getAuthInstance();
+          const signoutElement = document.getElementById('signout');
+		  signoutElement.innerHTML =
+			  'Sign out'
 		  auth2.signOut();
 		}
 		function onSignedIn(googleUser) {
