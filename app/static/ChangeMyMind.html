@@ -8,6 +8,7 @@
 	<meta name="google-signin-scope" content="profile email">
 	<meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
 	<ul>
@@ -37,48 +38,47 @@
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<!-- Header -->
 	<h1><br/></h1>
-    <h1 align="center">Are you ready for a debate!</h1>
-    <!-- Change My Mind Buttons -->
-    <div class="row">
-      <!-- Button 1 -->
-      <div id="quarter-page">
-        <p align="center">
-			<img align="center" src="changemymind.jpg" alt="Please Don't Fail Us" width="300" height="300">
-			<a href="form.html">
-			  <button id="wrapper">Eh, I guess so...</button>
-			</a>
-		</p>
-      </div>
-      
-      <!-- Button 2 -->
-      <div id="quarter-page">
-        <p align="center">
-		  <img src="meme.jpg" alt="Please Don't Fail Us" width="300" height="300">
-			<a href="form.html">
-			  <button id="wrapper">Sure.</button>
-			</a>
-		</p>
-      </div>
-      
-      <!-- Button 3 -->
-      <div id="quarter-page">
-        <p align="center">
-			<img align="center" src="meme1.jpg" alt="Please Don't Fail Us" width="300" height="300">
-			<a href="form.html">
-			  <button id="wrapper">You best believe it!</button>
-			</a>
-		</p>
-      </div>
-      
-      <!-- Button 4 -->
-      <div id="quarter-page">
-        <p align="center">
-			<img align="center" src="Untitled.jpg" alt="Please Don't Fail Us" width="300" height="300">
-			<a href="form.html">
-			  <button id="wrapper">TrUcK yEaH mOtHeRtRuCkEr!!!!!</button>
-			</a>
-		</p>
-      </div>
-    </div>
+<<<<<<< HEAD
+    <h1 align="center" id= text>Are you ready for a debate!</h1>
+    
+<body>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img id = row src="changemymind.jpg" height="300">
+  <img id = row src="meme.jpg" height="300">
+  <img id = row src="meme1.jpg" height="300">
+  <img id= row src="Untitled.jpg" height="300">
+</div>
+<div class="mySlides fade">
+  <img src="meme.jpg">
+</div>
+<div class="mySlides fade">
+  <img src="meme1.jpg">
+</div>
+<div class="mySlides fade">
+  <img src="Untitled.jpg">
+</div>
+<br>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+<div id= send>
+<a id= send href="form.html">
+  <button id= frontbutton>Let's Debate!!</button>
+</a>
   </body>
 </html>

@@ -1,11 +1,11 @@
 #container{
 	position:relative;
 	margin:auto;
-	width:800px;
-	height:700px;
-	box-sizing: border-box;
-	border: 2px solid #80ff80;
-	background-color: #e6ffcc;
+	width:400px;
+	height:450px;
+	box-sizing: border-box;         
+	border: 2px solid #557A95;
+	background-color: #7395AE;
 }
 
 #conv{
@@ -15,9 +15,9 @@
 	position: absolute;
 	top: 15px;
 	left: 15px;
-	box-sizing: border-box;
-	background-color: #e6ffcc;
-	overflow-y: auto;
+	box-sizing: border-box;         
+	background-color: #7395AE;
+  overflow-y: auto;
 	font-family: Helvetica, sans-serif;
 	font-size: 11pt;
 	line-height: 1.5;
@@ -36,7 +36,52 @@
 	position: absolute;
 	right: 2px;
 	bottom: 5px;
+  background-color: #B1A296; /* Green */
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  display: inline-block;
 }
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {
+  vertical-align: middle;
+  border: none;
+  width: 25%;
+  height: 300px;
+  align-items: center;
+	justify-content: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  align-items: center;
+	justify-content: center;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 
 div {
 	font-family: Serif, cursive, sans-serif
@@ -52,6 +97,8 @@ input {
 	float: left;
 }
 
+#row{
+  float: left;
 h1 {
 	font-family: Serif, cursive, sans-serif
 }
@@ -68,12 +115,12 @@ ul {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #333333;
+	background-color: #5d5c61;
 }
 
 li {
 	float: left;
-	border-right: 1px solid #BBBBBB;
+	border-right: 1px solid #88AFCB;
 }
 
 li:last-child {
@@ -83,7 +130,7 @@ li:last-child {
 
 li a {
 	display: block;
-	color: #00FF00;
+	color: #88AFCB;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -94,8 +141,29 @@ li a:hover {
 	background-color: #111;
 }
 
-#wrapper {
-	display: flex;
-	align-items: center;
+#frontbutton {
+  background-color: #B1A296; /* Green */
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 24px;
+  align-items: center;
+	justify-content: center;
+}
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+body {
+  background-color: #88AFCB;
+}
+
+#text {
+  color: #404040;
+}
+
+#send {
+  align-items: center;
 	justify-content: center;
 }
