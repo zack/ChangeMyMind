@@ -5,17 +5,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="/static/chat.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="google-signin-scope" content="profile email">
+	    <meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
     </head>
   <body>
 	<ul>
 		<li><a href="ChangeMyMind.html">Home</a></li>
 		<li><a href="#" onclick="signOut();" id="signout">Sign Out</a></li>
-		<li><div class="g-signin2" data-onsuccess="onSignedIn"></div></li>
+		<li><div id = "user_name" class="g-signin2" data-onsuccess="onSignedIn"></div></li>
 	</ul>
 	<script>
 		function onSignIn(){
 		  var profile = googleUser.getBasicProfile();
 		  document.getElementById('profileinfo').innerHTML = profile.getName() + "<br>"
+          document.getElementById("username").innerHTML = profile.getName() 
+          
 		}
 		function signOut() {
 		  var auth2 = gapi.auth2.getAuthInstance();
