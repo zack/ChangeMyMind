@@ -1,11 +1,10 @@
 <html>
     <head>
 		<meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="chat-style.css">
-		<script src="chat.js"></script>
-		<meta name="google-signin-scope" content="profile email">
-		<meta name="google-signin-client_id" content=739915422482-gmra2df2r5tvlp0aktbt6l8pvb9gndfr.apps.googleusercontent.com>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
+        <link rel="stylesheet" href="chat-style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="/static/chat.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
     </head>
   <body>
 	<ul>
@@ -20,6 +19,9 @@
 		}
 		function signOut() {
 		  var auth2 = gapi.auth2.getAuthInstance();
+          const signoutElement = document.getElementById('signout');
+		  signoutElement.innerHTML =
+			  'Sign out'
 		  auth2.signOut();
 		}
 		function onSignedIn(googleUser) {
@@ -38,5 +40,6 @@
 		<div id="conv">
 		</div>
 	</div>
+
   </body>
 </html>

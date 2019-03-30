@@ -23,6 +23,10 @@
 		function signOut() {
 		  var auth2 = gapi.auth2.getAuthInstance();
 		  auth2.signOut();
+			
+          const signoutElement = document.getElementById('signout');
+		  signoutElement.innerHTML =
+			  'Sign out'
 		}
 		function onSignedIn(googleUser) {
 		  const signoutElement = document.getElementById('signout');
@@ -49,7 +53,7 @@
       <!-- Button 2 -->
       <div id="quarter-page">
         <p align="center">
-			<img src="meme.jpg" alt="Please Don't Fail Us" width="300" height="300">
+		  <img src="meme.jpg" alt="Please Don't Fail Us" width="300" height="300">
 			<a href="form.html">
 			  <button id="wrapper">Sure.</button>
 			</a>
