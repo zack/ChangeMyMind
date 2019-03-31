@@ -1,6 +1,6 @@
 window.onload = function() {
     topic = "/pancakes-waffles"
-    window.history.pushState("object or string", "Title", topic);
+    //window.history.pushState("object or string", "Title", topic);
 
     document.getElementById("topic").innerHTML = "Pancakes v.s. Waffles...Go!" //grab from db
     

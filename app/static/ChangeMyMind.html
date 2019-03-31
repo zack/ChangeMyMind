@@ -38,7 +38,7 @@
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<!-- Header -->
 	<h1><br/></h1>
-    <h1 align="center" id= text>Are you ready for a debate!</h1>
+    <h1 align="center" font-family="sans-serif" id= text>Are you ready for a debate?</h1>
     
 <body>
 <div class="slideshow-container">
@@ -72,6 +72,8 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.marginLeft = "auto";
+  slides[slideIndex-1].style.marginRight = "auto";
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 </script>

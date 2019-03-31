@@ -54,7 +54,7 @@ img {
 }
 
 #topic{
-    font-family: Sans-serif;
+    font-family: sans-serif;
     text-align: center;
 }
 
@@ -89,12 +89,12 @@ img {
   .text {font-size: 11px}
 }
 div {
-	font-family: Serif, cursive, sans-serif
+	font-family: sans-serif;
 	text-align: center;
 }
 
 input {
-	font-family: Serif, cursive, sans-serif
+	font-family: sans-serif;
 }
 
 #quarter-page {
@@ -106,11 +106,11 @@ input {
   float: left;
 }
 h1 {
-	font-family: Serif, cursive, sans-serif
+	font-family: sans-serif;
 }
 
 button{
-	font-family: Serif, cursive, sans-serif
+	font-family: sans-serif;
 }
 
 ul {
@@ -140,7 +140,7 @@ li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-family: "Serif", cursive, sans-serif;
+	font-family: sans-serif;
 }
 
 li a:hover {

@@ -41,6 +41,17 @@ def index():
 def my_webservice():
     return jsonify(result=put_debate(**request.args)) 
 
+@app.route('/put_debate', methods=['GET', 'POST'])
+def put_debate(debate_id, user, transcript):
+    ds = get_client()
+    task_key = ds.key("debate") # unique ID for this entity
+    task = datastore.Entity(key=task_key)
+    task["debate_id"] = debate_id
+    task["user"] = user
+    task["transcript"] = transcript
+    ds.put(task)
+    return task
+
 @app.route('/get_debate', methods=['GET', 'POST'])
 def get_debates():
     ds = get_client()
