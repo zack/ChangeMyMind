@@ -4,8 +4,8 @@
 	width:400px;
 	height:450px;
 	box-sizing: border-box;         
-	border: 2px solid #557A95;
-	background-color: #7395AE;
+	border: 2px solid rgb(96, 143, 176);
+	background-color: #b3d9ff;
 }
 
 #conv{
@@ -16,7 +16,7 @@
 	top: 15px;
 	left: 15px;
 	box-sizing: border-box;         
-	background-color: #7395AE;
+	background-color: #b3d9ff;
   overflow-y: auto;
 	font-family: Helvetica, sans-serif;
 	font-size: 11pt;
