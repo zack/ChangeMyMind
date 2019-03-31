@@ -53,6 +53,11 @@ img {
 	justify-content: center;
 }
 
+#topic{
+    font-family: Sans-serif;
+    text-align: center;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;

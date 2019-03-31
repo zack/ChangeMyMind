@@ -1,10 +1,9 @@
 # Command to run locally: gunicorn3 -b 127.0.0.1:8080 -k flask_sockets.worker main:app
-# Run sudo-apt get install gunicorn3 first 
+# Run sudo apt-get install gunicorn3 first 
 
 # [START gae_flex_websockets_app]
 from __future__ import print_function
 from flask import Flask, redirect, render_template, request, jsonify
-#from flask_socketio import SocketIO
 from google.cloud import datastore
 from flask_sockets import Sockets
 
