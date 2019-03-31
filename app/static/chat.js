@@ -17,14 +17,7 @@ window.onload = function() {
         console.log('Connected');
         var signout = document.getElementById("signout").textContent.split(" ");
         var user_name = signout[signout.length-1];
-        var bubble = document.createElement("div");
-        bubble.style.color = "grey";
-        bubble.style.fontSize = "12";
-        bubble.style.textAlign = "center";
-        bubble.style.fontWeight = "bold";
-        bubble.innerHTML = user_name + " has entered the chat";
-        conv.append(bubble);
-        websocket.send(JSON.stringify(["", bubble.innerHTML]))
+        websocket.send(JSON.stringify([user_name, "has entered the chat"]))
       };
 
       websocket.onclose = function() {
@@ -34,9 +27,9 @@ window.onload = function() {
       websocket.onmessage = function(e) {
         user_name = JSON.parse(e.data)[0];
         msg = JSON.parse(e.data)[1];
-        console.log('Message received');
+        console.log("Message received: " + e.data);
         
-        if(user_name != "") {
+        if(msg != "has entered the chat") {
             var name = document.createElement("div");
             var bubble = document.createElement("div");
             var conv = document.getElementById("conv");
@@ -69,14 +62,24 @@ window.onload = function() {
             document.getElementById("text-input").value = "";
 
             //Store chat in database
-            dbStore(window.debate_id, e.data, e.data);
-            dbRetrieve();
+            dbStore(window.debate_id, user_name, msg);
+            //dbRetrieve();
+        }
+        else {
+            var conv = document.getElementById("conv");
+            var bubble = document.createElement("div");
+            bubble.style.color = "grey";
+            bubble.style.fontSize = "12";
+            bubble.style.textAlign = "center";
+            bubble.style.fontWeight = "bold";
+            bubble.innerHTML = user_name + " has entered the chat";
+            conv.append(bubble);
         }
       };
 
       websocket.onerror = function(e) {
         console.log('Error (see console)');
-        console.log(e);
+        console.log(e.data);
       };
 
       window.debate_id = 1
@@ -91,13 +94,13 @@ window.onload = function() {
         .addEventListener("keyup", function(event) {
             event.preventDefault();
             if (event.keyCode === 13) {
-            document.getElementById("send-btn").click();
+                document.getElementById("send-btn").click();
             }
         });
 }
 
 function dbStore(debate_id, user, transcript){
-    console.log("Stored")
+    console.log("Stored: " + debate_id + " " + user + " " + transcript)
     $.ajax({
         type: "GET",
         url: "/webservice",

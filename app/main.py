@@ -1,5 +1,6 @@
 # Command to run locally: gunicorn3 -b 127.0.0.1:8080 -k flask_sockets.worker main:app
-# Run sudo apt-get install gunicorn3 first 
+# Run sudo apt-get install gunicorn3 first
+# Deploy using gcloud beta app deploy
 
 # [START gae_flex_websockets_app]
 from __future__ import print_function
@@ -55,7 +56,7 @@ def put_debate(debate_id, user, transcript):
 @app.route('/get_debate', methods=['GET', 'POST'])
 def get_debates():
     ds = get_client()
-    return ds.query(kind="debate").fetch()
+    return str(list(ds.query(kind="debate").fetch()))
 
 @app.route('/get_client', methods=['GET', 'POST'])
 def get_client():
