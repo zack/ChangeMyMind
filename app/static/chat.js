@@ -1,74 +1,9 @@
-/*
-window.onload=function(){
-    //Temporary unique debate ID
-    window.debate_id = 1
-    socket.on( 'connect', function() {
-		document.getElementById("send-btn").onclick = function fun(e) {
-				e.preventDefault()
-                var signout = document.getElementById("signout").textContent.split(" ");
-                var user_name = signout[signout.length-1]
-		window.socket.emit( 'my event', {
-				user_name : user_name,
-				message : document.getElementById("text-input").value
-			} )
-		}
-	} )
-
-	// Trigger send click on enter key
-	document.getElementById("text-input")
-		.addEventListener("keyup", function(event) {
-		event.preventDefault();
-		if (event.keyCode === 13) {
-			document.getElementById("send-btn").click();
-		}
-	});
-
-
-
-    window.socket.on( 'my response', function( msg ) {
-        console.log( msg )
-
-        if( typeof msg.user_name !== 'undefined' ) {
-            var name = document.createElement("div");
-            var bubble = document.createElement("div");
-            var conv = document.getElementById("conv");
-
-            name.innerHTML = msg.user_name;
-            name.style.textAlign = "left";
-            name.style.marginTop = "1px";
-            name.style.color = "grey";
-            name.style.fontSize = "10";
-
-            bubble.innerHTML = msg.message;
-            bubble.style.width = "auto";
-            bubble.style.height = "auto";
-            bubble.style.display = "table";
-            bubble.style.wordBreak = "break-all";
-            bubble.style.wordWrap = "normal";
-            bubble.style.borderRadius = "10px";
-            bubble.style.padding = "7px";
-            bubble.style.marginLeft = "5px";
-            //bubble.style.marginRight = "0px";
-            bubble.style.marginTop = "1px";
-            bubble.style.maxWidth = "90%";
-            bubble.style.background = "#6666ff";
-            bubble.style.color = "white";
-
-
-            conv.append(name);
-            conv.appendChild(bubble);
-            conv.scrollTop = conv.scrollHeight;
-            document.getElementById("text-input").value = "";
-
-            //Store chat in database
-            dbStore(debate_id, msg.user_name, msg.message)
-            dbRetrieve()
-		}
-	})
-}
-*/
-
 window.onload = function() {
+    topic = "/pancakes-waffles"
+    window.history.pushState("object or string", "Title", topic);
+
+    document.getElementById("topic").innerHTML = "Pancakes v.s. Waffles" //grab from db
+    
     var scheme = window.location.protocol == "https:" ? 'wss://' : 'ws://';
     var webSocketUri =  scheme
                         + window.location.hostname
@@ -80,6 +15,13 @@ window.onload = function() {
 
       websocket.onopen = function() {
         console.log('Connected');
+        var signout = document.getElementById("signout").textContent.split(" ");
+        var user_name = signout[signout.length-1]
+        var bubble = document.createElement("div");
+        bubble.style.color = "grey";
+        bubble.style.fontSize = "10";
+        bubble.innerHTML = user_name + " has entered the chat";
+        conv.append(bubble);
       };
 
       websocket.onclose = function() {
@@ -179,4 +121,6 @@ function dbRetrieve(){
         console.log(data);
     });
 }
+
+
 

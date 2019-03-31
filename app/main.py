@@ -1,3 +1,6 @@
+# Command to run locally: gunicorn3 -b 127.0.0.1:8080 -k flask_sockets.worker main:app
+# Run sudo-apt get install gunicorn3 first 
+
 # [START gae_flex_websockets_app]
 from __future__ import print_function
 from flask import Flask, redirect, render_template, request, jsonify
@@ -35,6 +38,18 @@ def add_header(resp):
 def index():
     return redirect("static/ChangeMyMind.html")
 
+@app.route("/webservice", methods=['GET', 'POST'])    
+def my_webservice():
+    return jsonify(result=put_debate(**request.args)) 
+
+@app.route('/get_debate', methods=['GET', 'POST'])
+def get_debates():
+    ds = get_client()
+    return ds.query(kind="debate").fetch()
+
+@app.route('/get_client', methods=['GET', 'POST'])
+def get_client():
+    return datastore.Client()
 
 if __name__ == '__main__':
     print("""
